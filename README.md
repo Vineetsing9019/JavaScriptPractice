@@ -7,3 +7,4 @@ My JavaScript practice, lesson by lesson: first scripts, internal and external s
 | Date | File | What I learned |
 |------|------|----------------|
 | 2026-10-16 | [first.html](daily/2026-10-16/JavaScript/basics/first.html) | Learning JavaScript basics (my first scripts) |
+| 2026-10-16 | [second.html](daily/2026-10-16/JavaScript/basics/second.html) | Learning JavaScript basics |
