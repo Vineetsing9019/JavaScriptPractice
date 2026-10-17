@@ -2,3 +2,4 @@
 2026-10-16|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\second.html
 2026-10-16|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\myscript.js
 2026-10-16|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\variables.html
+2026-10-17|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\operators.html
