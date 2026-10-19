@@ -4,3 +4,4 @@
 2026-10-16|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\variables.html
 2026-10-17|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\operators.html
 2026-10-19|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\conditions.html
+2026-10-19|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\loops.html
