@@ -14,3 +14,4 @@ My JavaScript practice, lesson by lesson: first scripts, internal and external s
 | 2026-10-19 | [conditions.html](daily/2026-10-19/JavaScript/basics/conditions.html) | Learning JavaScript basics (conditions) |
 | 2026-10-19 | [loops.html](daily/2026-10-19/JavaScript/basics/loops.html) | Learning JavaScript basics (loops) |
 | 2026-10-19 | [id_else.html](daily/2026-10-19/JavaScript/basics/id_else.html) | Learning JavaScript basics |
+| 2026-10-19 | [user_interreaction.html](daily/2026-10-19/JavaScript/basics/user_interreaction.html) | Learning JavaScript basics |
