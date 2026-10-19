@@ -7,3 +7,4 @@
 2026-10-19|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\loops.html
 2026-10-19|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\id_else.html
 2026-10-19|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\user_interreaction.html
+2026-10-19|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\addition.html
