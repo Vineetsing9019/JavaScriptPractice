@@ -11,3 +11,4 @@ My JavaScript practice, lesson by lesson: first scripts, internal and external s
 | 2026-10-16 | [myscript.js](daily/2026-10-16/JavaScript/basics/myscript.js) | Learning JavaScript basics (external scripts) |
 | 2026-10-16 | [variables.html](daily/2026-10-16/JavaScript/basics/variables.html) | Learning JavaScript basics (variables and data types) |
 | 2026-10-17 | [operators.html](daily/2026-10-17/JavaScript/basics/operators.html) | Learning JavaScript basics (operators) |
+| 2026-10-19 | [conditions.html](daily/2026-10-19/JavaScript/basics/conditions.html) | Learning JavaScript basics (conditions) |
