@@ -10,3 +10,4 @@
 2026-10-19|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\addition.html
 2026-10-20|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\math.html
 2026-10-20|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\hoisting.html
+2026-10-20|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\let-var.html
