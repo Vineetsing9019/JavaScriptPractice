@@ -20,3 +20,4 @@ My JavaScript practice, lesson by lesson: first scripts, internal and external s
 | 2026-10-20 | [hoisting.html](daily/2026-10-20/JavaScript/basics/hoisting.html) | Learning JavaScript basics |
 | 2026-10-20 | [let-var.html](daily/2026-10-20/JavaScript/basics/let-var.html) | Learning JavaScript basics |
 | 2026-10-20 | [functions.html](daily/2026-10-20/JavaScript/basics/functions.html) | Learning JavaScript basics (functions) |
+| 2026-10-20 | [arrays.html](daily/2026-10-20/JavaScript/basics/arrays.html) | Learning JavaScript basics (arrays) |

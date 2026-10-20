@@ -12,3 +12,4 @@
 2026-10-20|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\hoisting.html
 2026-10-20|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\let-var.html
 2026-10-20|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\functions.html
+2026-10-20|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\arrays.html
