@@ -17,3 +17,4 @@ My JavaScript practice, lesson by lesson: first scripts, internal and external s
 | 2026-10-19 | [user_interreaction.html](daily/2026-10-19/JavaScript/basics/user_interreaction.html) | Learning JavaScript basics |
 | 2026-10-19 | [addition.html](daily/2026-10-19/JavaScript/basics/addition.html) | Learning JavaScript basics |
 | 2026-10-20 | [math.html](daily/2026-10-20/JavaScript/basics/math.html) | Learning JavaScript basics |
+| 2026-10-20 | [hoisting.html](daily/2026-10-20/JavaScript/basics/hoisting.html) | Learning JavaScript basics |
