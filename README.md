@@ -22,3 +22,4 @@ My JavaScript practice, lesson by lesson: first scripts, internal and external s
 | 2026-10-20 | [functions.html](daily/2026-10-20/JavaScript/basics/functions.html) | Learning JavaScript basics (functions) |
 | 2026-10-20 | [arrays.html](daily/2026-10-20/JavaScript/basics/arrays.html) | Learning JavaScript basics (arrays) |
 | 2026-10-21 | [objects.html](daily/2026-10-21/JavaScript/basics/objects/objects.html) | Learning JavaScript basics (objects) |
+| 2026-10-21 | [obj_imp_concepts.html](daily/2026-10-21/JavaScript/basics/objects/obj_imp_concepts.html) | Learning JavaScript basics |
