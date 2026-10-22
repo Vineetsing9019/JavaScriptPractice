@@ -17,3 +17,4 @@
 2026-10-21|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\objects\obj_imp_concepts.html
 2026-10-22|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\objects\f1.html
 2026-10-22|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\objects\ananymous_fn.html
+2026-10-22|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\higher_order_fn.html

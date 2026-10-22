@@ -25,3 +25,4 @@ My JavaScript practice, lesson by lesson: first scripts, internal and external s
 | 2026-10-21 | [obj_imp_concepts.html](daily/2026-10-21/JavaScript/basics/objects/obj_imp_concepts.html) | Learning JavaScript basics |
 | 2026-10-22 | [f1.html](daily/2026-10-22/JavaScript/basics/objects/f1.html) | Learning JavaScript basics |
 | 2026-10-22 | [ananymous_fn.html](daily/2026-10-22/JavaScript/basics/objects/ananymous_fn.html) | Learning JavaScript basics |
+| 2026-10-22 | [higher_order_fn.html](daily/2026-10-22/JavaScript/basics/higher_order_fn.html) | Learning JavaScript basics |
