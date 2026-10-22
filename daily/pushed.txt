@@ -15,3 +15,4 @@
 2026-10-20|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\arrays.html
 2026-10-21|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\objects\objects.html
 2026-10-21|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\objects\obj_imp_concepts.html
+2026-10-22|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\objects\f1.html
