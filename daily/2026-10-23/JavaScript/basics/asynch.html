@@ -1,0 +1,37 @@
+﻿<!-- Learning JavaScript basics (async code) - practice file from JavaScript, pushed 2026-10-23 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // synchronous methods/ tasks / activities
+        // we wait for the response,
+        function demo() {
+            for(let i = 1; i <= 900000000; i++) {}
+            console.log("executing demo");
+            return "done";
+            
+        }
+        const response = demo();
+        console.log(response);
+
+        //asychronomous task - used for generating delay
+        // setTimeout(callback, delay_ms)
+        console.log("starting the asynch activity");
+        // setTimeout(() => {
+        // console.log("5 seconds completed");
+        //} 5000ml secs);
+        setInterval(() => {
+            console.log("1 sec completed");
+            
+            
+        }, 1000 );
+        
+        
+    </script>
+</body>
+</html>
