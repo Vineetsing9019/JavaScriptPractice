@@ -22,3 +22,4 @@
 2026-10-23|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\asynch.html
 2026-10-26|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\promise.html
 2026-10-26|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\fetch_demo.html
+2026-10-26|C:\Users\Vineet\OneDrive\Desktop\JavaScript\basics\second_promise.html
