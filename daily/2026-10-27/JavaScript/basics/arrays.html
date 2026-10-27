@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>arrays in javascript</h1>
+   <script>
+    let fruits = ["apple", "mango", "banana"];
+
+    // read and length
+    console.log(fruits[0]);      // apple
+    console.log(fruits.length);  // 3
+
+    // add and remove
+    fruits.push("grapes");    // add at end
+    fruits.unshift("kiwi");   // add at start
+    console.log(fruits);
+    fruits.pop();             // remove from end
+    fruits.shift();           // remove from start
+    console.log(fruits);
+
+    // find
+    console.log(fruits.indexOf("mango"));    // 1
+    console.log(fruits.includes("banana"));  // true
+
+    // slice (copy part) and splice (change in place)
+    console.log(fruits.slice(0, 2)); // ["apple", "mango"]
+    fruits.splice(1, 1, "orange");   // replace mango with orange
+    console.log(fruits);
+
+    // loop
+    fruits.forEach((f, i) => console.log(i + " : " + f));
+
+    let marks = [45, 78, 90, 32, 66];
+
+    // map - new array from each value
+    let bonus = marks.map(m => m + 5);
+    console.log(bonus);
+
+    // filter - keep the ones that pass
+    let passed = marks.filter(m => m >= 35);
+    console.log(passed);
+
+    // reduce - one value from all
+    let total = marks.reduce((sum, m) => sum + m, 0);
+    console.log("total = " + total); // 311
+
+    // sort numbers (needs a compare function)
+    marks.sort((a, b) => a - b);
+    console.log(marks);
+
+    // join and spread
+    console.log(fruits.join(", "));
+    let more = [...fruits, "papaya"];
+    console.log(more);
+   </script>
+</body>
+</html>
