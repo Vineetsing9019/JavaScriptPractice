@@ -1,0 +1,51 @@
+﻿<!-- Learning JavaScript basics (async code) - practice file from JavaScript, pushed 2026-10-27 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    // if the promise code is the lengthy and complicated
+    // in that case when we have dependent promises, code may be
+      // complex, unreadable, unmanageable, difficult to debug,
+      //difficult to maintain
+      // in that case we can use async await to make the code more 
+      // readable, manageable,
+       function isEven(num){
+        return new Promise((ressolve , reject)=>{
+            console.log(`checking if ${num} is even`);
+            if (num % 2===0){
+                ressolve(num + " is even");
+            } else{
+                
+            }
+            async function checkEvenNumbers(){
+                try{
+                    const resp1 = await isEven(10);
+                    console.log(resp1);
+                    const resp2 = await isEven(6);
+                    console.log(resp2);
+                    
+                    const resp3 = await isEven(441);
+                    console.log(resp3);
+                    
+                    const resp4 = await isEven(22);
+                    console.log(resp4);
+                    
+                    
+                }catch(err){
+                    console.error(err);
+                    
+                }
+                
+            }
+            checkEvenNumbers();
+            
+        })
+       }
+   </script> 
+</body>
+</html>
