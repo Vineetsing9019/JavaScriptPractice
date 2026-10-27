@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // non - parameterized functions, void function
+
+        function greet() {
+            alert("Good Morning All !!");
+        
+        }
+
+        // parameterized , void function
+        function sayHello(name) {
+            alert("Hello "+ name)
+        }
+        // non parameterized function, non void function
+        function getPI() {
+            return 22/7;
+        }
+        //  parameterized function, non void function
+        function add(n1, n2) {
+            return n1+n2;
+        }
+
+       // greet();
+        // sayHello("Viny");
+     /*
+      const PI = getPI();
+     const sum =  add(10, 20 );
+     alert("PI="+PI);
+     alert("addition= "+ sum);
+     alert("total= " + add(20,50));
+     */
+ console.log("total= " + add(20,30));
+ console.log("total= " + add("hii, all"));
+ console.log("total= " + add("hii, 50"));  //hii50
+ console.log("total= " + add("hii,50, 20")); //hii50
+ console.log("total= " + add(20)); //NaN
+ console.log("total= " + add()); // NaN
+ 
+
+    </script>
+</body>
+</html>
