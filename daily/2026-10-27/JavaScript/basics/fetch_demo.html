@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // fetch("https://dummyjson.com/products")
+        // .then(resp => {
+        //     // console.log(resp);
+        //     return resp.json();
+        // })
+        // .then(data => {
+        //     console.log(data);
+        //     const allProducts = data.products;
+        //     console.log(allProducts);
+            
+        //     console.log(allProducts[0]);
+        //     console.log(allProducts[0].title);
+
+        //     for(let i=0; i < allProducts.length; i++){
+        //         console.log(allProducts[i].id + " "+allProducts[i].title)
+        //     }
+            
+            
+        //     return resp.json();
+        // })
+        // .then(data => console.log(data))
+        // .catch(err => console.error(err));
+
+        fetch("http://localhost:8080/doctors")
+        .then(resp => resp.json())
+        .then(data => {
+            console.log(data);
+            const allUsers = data._embedded.doctors
+        })
+    </script>
+</body>
+</html>
