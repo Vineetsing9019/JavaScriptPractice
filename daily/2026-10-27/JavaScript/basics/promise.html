@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const egg = new Promise((resolve, reject) => {
+            console.log("Promise, executor function");
+
+            let status = true;
+
+            if (status === true) {
+                resolve("It's a chick!!");
+            } else {
+                reject("Sorry! It's a broken egg");
+            }
+        });
+
+        // Consuming the promise
+
+        egg
+        .then(resp => console.log(resp)) // resolve
+            .catch(err => console.log(err)) // reject
+            .finally(() => console.log("Within finally"));
+    </script>
+</body>
+</html>
