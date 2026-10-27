@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>functions in javascript</h1>
+   <script>
+    // function declaration
+    function add(a, b) {
+        return a + b;
+    }
+    console.log(add(5, 3)); // 8
+
+    // default parameter
+    function greet(name = "guest") {
+        console.log("hello " + name);
+    }
+    greet();        // hello guest
+    greet("viny");  // hello viny
+
+    // function expression
+    const square = function (n) {
+        return n * n;
+    };
+    console.log(square(4)); // 16
+
+    // arrow function (ES6)
+    const cube = (n) => n * n * n;
+    console.log(cube(3)); // 27
+
+    // rest parameter - any number of values
+    function sum(...nums) {
+        let total = 0;
+        for (let n of nums) {
+            total += n;
+        }
+        return total;
+    }
+    console.log(sum(1, 2, 3, 4)); // 10
+
+    // function as a value (callback)
+    function calculate(a, b, operation) {
+        return operation(a, b);
+    }
+    console.log(calculate(10, 2, (x, y) => x / y)); // 5
+
+    // function returning a function
+    function multiplier(factor) {
+        return (n) => n * factor;
+    }
+    const double = multiplier(2);
+    console.log(double(7)); // 14
+   </script>
+</body>
+</html>
