@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head" style="color: brown; background-color: blue;">understanding DOM</h1>
+    <p>para 1</p>
+    <button onclick="updateContent()">update</button>
+    <p>para 2</p>
+    <p id="para"><span>This is a span</span></p>
+    <input type="text" name="name" id="name">
+   
+    <button onclick="submitForm()">Submit</button>
+
+    <script>
+        const heading = document.getElementById("head");
+        console.log(heading);
+        console.log(heading.innerText); //understanding DOM
+
+        const para = document.getElementById("para");
+        console.log(para);
+        console.log(para.innerText); // This is a span
+        console.log(para.innerHTML); // <span>This is a span</span>
+
+        const allPara = document.getElementsByTagName("p");
+        console.log(allPara[0]); // displays first p tag
+        console.log(allPara[0].innerText);
+
+        const allH1 = document.getElementsByTagName("h1");
+        console.log(allH1[0].innerText);
+
+        function updateContent() {
+            const heading = document.getElementById("head");
+            const para = document.getElementById("para");
+            heading.innerText = "new content set by js dinamically";
+            para.innerHTML = '<a href="http://www.google.com">Click here</a> ';
+
+
+            heading.style.color = "red";
+            heading.style.backgroundColor ="pink";
+            heading.style.fontSize ="30px";
+            
+        }
+
+        function submitForm() {
+            const inputElem = document.getElementById("name");
+            alert("welcome " + inputElem.value); // read
+
+            inputElem.value = "viny";  // write 
+        }
+    </script>
+</body>
+</html>
