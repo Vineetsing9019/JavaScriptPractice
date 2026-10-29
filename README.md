@@ -34,3 +34,4 @@ My JavaScript practice, lesson by lesson: first scripts, internal and external s
 | 2026-10-27 | [first.html](daily/2026-10-27/JavaScript/basics/DOM/first.html) | Learning JavaScript basics (my first scripts) |
 | 2026-10-27 | [asynch_await.html](daily/2026-10-27/JavaScript/basics/asynch_await.html) | Learning JavaScript basics (async code) |
 | 2026-10-28 | [second.html](daily/2026-10-28/JavaScript/basics/DOM/second.html) | Learning JavaScript basics |
+| 2026-10-29 | [form.html](daily/2026-10-29/JavaScript/basics/DOM/form.html) | Learning JavaScript basics (loops) |
