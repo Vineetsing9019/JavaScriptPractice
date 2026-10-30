@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="myclass"> element selectors/ getters</h1>
+    <div>
+        <p class="myclass"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam vel aspernatur quam ab totam voluptatum
+            ad fugit at laboriosam fugiat.</p>
+    </div>
+    <h1>This is header 4</h1>
+    <p class="myclass">we will learn to select single and multiple</p>
+    <p> This  is last paragraph</p>
+
+    <script>
+        const allElements = document.getElementsByClassName("myClass"); //return elements
+        console.log(allElements);
+        
+        // query selector
+         const firstHeading =document.querySelector("h1");
+       const firstParagraph = document.querySelector("p");
+       console.log(firstHeading);
+       console.log(firstParagraph);
+       const firstClassElement = document.querySelector(".myclass");
+
+       const classElemt = document.querySelector(".myclass");
+       const idHead = document.querySelector("#head");
+
+       const allH1 = document.querySelector(".myclass");
+    //   returns NodeList - Collection/array
+       
+       
+    </script>
+</body>
+
+</html>
