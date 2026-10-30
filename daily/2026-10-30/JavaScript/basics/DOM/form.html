@@ -1,0 +1,182 @@
+
+
+<!DOCTYPE html>
+<html lang="en" id="htmlPage">
+<head id="headSection">
+    <meta charset="UTF-8" id="charsetMeta">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" id="viewportMeta">
+    <title id="pageTitle">Currency Converter</title>
+
+    <style id="pageStyles">
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            width: 350px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 16px;
+            border: 1px solid #999;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            overflow-wrap: anywhere;
+        }
+    </style>
+</head>
+
+<body id="bodySection">
+
+    <div class="container" id="converterContainer">
+
+        <h2 id="heading">Currency Converter</h2>
+
+        <div class="form-group" id="amountGroup">
+            <label for="amount" id="amountLabel">Amount</label>
+            <input type="number" id="amount" value="100" min="0.01" step="any">
+        </div>
+
+        <div class="form-group" id="fromGroup">
+            <label for="from" id="fromLabel">From</label>
+            <select id="from">
+                <option value="USD" id="fromUSD" selected>USA - USD</option>
+                <option value="INR" id="fromINR">India - INR</option>
+                <option value="EUR" id="fromEUR">Europe - EUR</option>
+                <option value="GBP" id="fromGBP">United Kingdom - GBP</option>
+                <option value="JPY" id="fromJPY">Japan - JPY</option>
+                <option value="AED" id="fromAED">UAE - AED</option>
+                <option value="CAD" id="fromCAD">Canada - CAD</option>
+                <option value="AUD" id="fromAUD">Australia - AUD</option>
+            </select>
+        </div>
+
+        <div class="form-group" id="toGroup">
+            <label for="to" id="toLabel">To</label>
+            <select id="to">
+                <option value="USD" id="toUSD">USA - USD</option>
+                <option value="INR" id="toINR" selected>India - INR</option>
+                <option value="EUR" id="toEUR">Europe - EUR</option>
+                <option value="GBP" id="toGBP">United Kingdom - GBP</option>
+                <option value="JPY" id="toJPY">Japan - JPY</option>
+                <option value="AED" id="toAED">UAE - AED</option>
+                <option value="CAD" id="toCAD">Canada - CAD</option>
+                <option value="AUD" id="toAUD">Australia - AUD</option>
+            </select>
+        </div>
+
+        <button id="convertButton" onclick="convertCurrency()">Convert</button>
+
+        <p id="result"></p>
+
+    </div>
+
+    <script id="pageScript">
+        async function convertCurrency() {
+
+            // Get values from input and dropdowns
+            let amount =+ Number(document.getElementById("amount").value);
+            let from = document.getElementById("from").value;
+            let to = document.getElementById("to").value;
+            let result = document.getElementById("result");
+
+            // Check the amount
+            if (!Number.isFinite(amount) || amount <= 0) {
+                result.innerText = "Please enter a valid amount.";
+                return;
+            }
+
+            result.innerText = "Converting...";
+
+            try {
+                // Get live exchange rates from the API
+                let response = await fetch(
+                    `https://open.er-api.com/v6/latest/${from}`
+                );
+
+                if (!response.ok) {
+                    throw new Error("Unable to get exchange rates.");
+                }
+
+                let data = await response.json();
+
+                if (data.result !== "success" || !data.rates[to]) {
+                    throw new Error("Currency conversion is unavailable.");
+                }
+
+                // Get the exchange rate
+                let rate = data.rates[to];
+
+                // Calculate the converted amount
+                let convertedAmount = amount * rate;
+
+                // Display the result
+                result.innerText =
+                    `${amount} ${from} = ${convertedAmount.toLocaleString(
+                        "en-US",
+                        {
+                            minimumFractionDigits: 2,
+                            maximumFractionDigits: 2
+                        }
+                    )} ${to}`;
+
+            } catch (error) {
+                result.innerText =
+                    "Unable to convert. Please check your internet connection and try again.";
+                console.error(error);
+            }
+        }
+    </script>
+
+</body>
+</html>
