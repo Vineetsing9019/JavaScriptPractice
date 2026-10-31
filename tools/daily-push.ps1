@@ -10,7 +10,10 @@ $Repo    = 'D:\JavaScriptPractice'
 $Log     = Join-Path $Repo 'tools\daily-push.log'
 $Pushed  = Join-Path $Repo 'daily\pushed.txt'
 $Desk    = 'C:\Users\Vineet\OneDrive\Desktop'
-$Sources = @('JavaScript') | ForEach-Object { Join-Path $Desk $_ }
+# Vineet renamed the folder to my_JavaScript on 31 Oct. Either name works, and files pushed under the old
+# name still count as pushed (paths compare with my_JavaScript read as JavaScript).
+$Sources = @('my_JavaScript', 'JavaScript') | ForEach-Object { Join-Path $Desk $_ } | Where-Object { Test-Path $_ } | Select-Object -First 1
+function Same-Name($p) { return ($p -replace '\\Desktop\\my_JavaScript\\', '\Desktop\JavaScript\') }
 $SkipRe  = '\\(node_modules|dist|vendor)\\|\.min\.js$|\\bootstrap[^\\]*\.js$|\\jquery[^\\]*\.js$'
 $BS      = [string][char]92
 
@@ -79,12 +82,12 @@ try {
             $_.Extension -match '^\.(js|html|htm)$' -and $_.FullName -notmatch $SkipRe -and (Has-Code $_.FullName)
         }
     })
-    $candidates = @($candidates | Where-Object { $f = $_.FullName; -not ($done | Where-Object { $_.Split('|')[1] -eq $f }) })
+    $candidates = @($candidates | Where-Object { $f = Same-Name $_.FullName; -not ($done | Where-Object { (Same-Name $_.Split('|')[1]) -eq $f }) })
     if (-not $candidates) { Log "No unpushed JavaScript files left."; exit 0 }
 
     # Oldest first, so the repo follows the order the lessons were written in.
     foreach ($pick in ($candidates | Sort-Object LastWriteTime | Select-Object -First $Count)) {
-        $rel   = $pick.FullName.Substring($Desk.Length).TrimStart($BS)
+        $rel   = $pick.FullName.Substring($Desk.Length).TrimStart($BS) -replace '^my_JavaScript', 'JavaScript'
         $topic = Get-Topic $rel $pick.Name
         $dest  = Join-Path $Repo ("daily" + $BS + $today + $BS + $rel)
         if ($DryRun) { Log "Dry run would push $($pick.FullName)  [$topic]"; continue }
