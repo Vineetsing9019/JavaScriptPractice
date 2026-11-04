@@ -1,0 +1,43 @@
+﻿<!-- Learning JavaScript basics - practice file from JavaScript, pushed 2026-10-20 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>hoisting in javascript</h1>
+   <script>
+    // hoisting: declarations are moved to the top before the code runs
+
+    // var is hoisted and set to undefined
+    console.log(a); // undefined (no error)
+    var a = 10;
+    console.log(a); // 10
+
+    // let and const are hoisted but NOT initialised (temporal dead zone)
+    // console.log(b); // ReferenceError: Cannot access 'b' before initialization
+    let b = 20;
+    console.log(b);
+
+    // function declarations are hoisted completely
+    greet(); // works before the function is written
+    function greet() {
+        console.log("hello from greet");
+    }
+
+    // function expressions are not (only the var is hoisted)
+    // sayHi(); // TypeError: sayHi is not a function
+    var sayHi = function () {
+        console.log("hi");
+    };
+    sayHi();
+
+    // arrow functions with let/const are in the dead zone too
+    const add = (x, y) => x + y;
+    console.log(add(2, 3)); // 5
+   </script>
+</body>
+</html>
+
