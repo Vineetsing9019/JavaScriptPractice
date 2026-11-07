@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+<body>
+   <h1>strings in javascript</h1>
+   <script>
+    // 3 ways to make a string
+    let first = 'viny';
+    let last = "girase";
+    let full = `${first} ${last}`;   // template literal (ES6), ${} puts a value inside
+    console.log(full);              // viny girase
+
+    // length and one character
+    console.log(full.length);       // 11
+    console.log(full[0]);           // v
+    console.log(full.charAt(5));    // g
+
+    // strings never change (immutable), methods give back a NEW string
+    console.log(full.toUpperCase()); // VINY GIRASE
+    console.log(full);               // viny girase (same as before)
+
+    // searching
+    console.log(full.indexOf("g"));        // 5
+    console.log(full.includes("viny"));    // true
+    console.log(full.startsWith("vi"));    // true
+    console.log(full.endsWith("se"));      // true
+
+    // cutting a piece out
+    console.log(full.slice(0, 4));    // viny
+    console.log(full.slice(-6));      // girase (minus counts from the end)
+    console.log(full.substring(5));   // girase
+
+    // changing
+    let msg = "   hello world   ";
+    console.log(msg.trim());                       // "hello world"
+    console.log("a-b-c".replace("-", "+"));        // a+b-c (first only)
+    console.log("a-b-c".replaceAll("-", "+"));     // a+b+c
+    console.log("ha".repeat(3));                   // hahaha
+
+    // string <-> array
+    let words = "java,spring,html,js".split(",");
+    console.log(words);              // ["java", "spring", "html", "js"]
+    console.log(words.join(" | "));  // java | spring | html | js
+
+    // number + string = string
+    console.log(10 + "5");           // 105
+    console.log(10 - "5");           // 5 (minus turns "5" into a number)
+    console.log(Number("25") + 5);   // 30
+    console.log(String(99) + 1);     // 991
+
+    // compare
+    console.log("apple" < "banana");                 // true (dictionary order)
+    console.log("Viny".toLowerCase() === "viny");    // true
+
+    // small task: count the vowels in a name
+    let name = "javascript";
+    let count = 0;
+    for (let ch of name) {
+        if ("aeiou".includes(ch)) {
+            count++;
+        }
+    }
+    document.write(`${name} has ${count} vowels`);   // javascript has 3 vowels
+   </script>
+</body>
+</html>
