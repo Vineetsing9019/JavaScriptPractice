@@ -1,0 +1,27 @@
+﻿<!-- Learning JavaScript basics (async code) - practice file from JavaScript, pushed 2026-10-26 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        fetch("https://dummyjson.com/products")
+            .then(resp => {
+                console.log(resp);
+
+                return resp.json();
+            })
+            .then(data => {
+                console.log(data);
+            })
+            .catch(err => {
+                console.error(err);
+            });
+    </script>
+</body>
+</html>
+
