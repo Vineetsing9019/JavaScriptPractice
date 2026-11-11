@@ -1,0 +1,75 @@
+﻿<!-- Learning JavaScript basics (conditions) - practice file from JavaScript, pushed 2026-10-19 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>conditions in javascript</h1>
+   <script>
+    let marks = 72;
+
+    // if
+    if (marks >= 35) {
+        console.log("pass");
+    }
+
+    // if else
+    if (marks % 2 == 0) {
+        console.log("even marks");
+    } else {
+        console.log("odd marks");
+    }
+
+    // else if ladder
+    if (marks >= 75) {
+        console.log("distinction");
+    } else if (marks >= 60) {
+        console.log("first class");
+    } else if (marks >= 35) {
+        console.log("second class");
+    } else {
+        console.log("fail");
+    }
+
+    // nested if
+    let age = 20;
+    let hasLicence = true;
+    if (age >= 18) {
+        if (hasLicence) {
+            console.log("can drive");
+        } else {
+            console.log("get a licence first");
+        }
+    }
+
+    // switch case
+    let day = 3;
+    switch (day) {
+        case 1:
+            console.log("monday");
+            break;
+        case 2:
+            console.log("tuesday");
+            break;
+        case 3:
+            console.log("wednesday");
+            break;
+        default:
+            console.log("other day");
+    }
+
+    // truthy and falsy values
+    // falsy: 0, "", null, undefined, NaN, false
+    let username = "";
+    if (username) {
+        console.log("hello " + username);
+    } else {
+        console.log("username is empty");
+    }
+   </script>
+</body>
+</html>
+
