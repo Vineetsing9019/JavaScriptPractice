@@ -1,0 +1,71 @@
+﻿<!-- Learning JavaScript basics (async code) - practice file from JavaScript, pushed 2026-10-26 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isEven(num) {
+            return new Promise((resolve, reject) => {
+                console.log(`Checking if ${num} is even`);
+
+                if (num % 2 == 0) {
+                    resolve(num + " is an even number");
+                } else {
+                    reject(num + " is an odd number");
+                }
+            });
+        }
+
+        // Consuming the promise
+
+        // isEven(10)
+        //     .then(resp => console.log(resp)) // resolve
+        //     .catch(err => console.error(err)) // reject
+        //     .finally(() => console.log("Within finally"));
+
+        // isEven(9)
+        //     .then(resp => console.log(resp)) // resolve
+        //     .catch(err => console.error(err)) // reject
+        //     .finally(() => console.log("Within finally"));
+
+        // dependent promises
+
+        isEven(10)
+            .then(resp => {
+                console.log(resp);
+                return isEven(78);
+            })
+            .then(resp => {
+                console.log(resp);
+                return isEven(6);
+            })
+            .then(resp => {
+                console.log(resp);
+                return isEven(5);
+            })
+            .then(resp => {
+                console.log(resp);
+                return isEven(4);
+            })
+            .then(resp => {
+                console.log(resp);
+            })
+            .catch(err => {
+                console.error(err);
+            })
+            .finally(() => {
+                console.log("Within finally");
+            });
+
+    </script>
+</body>
+
+</html>
+
