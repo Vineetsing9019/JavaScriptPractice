@@ -1,0 +1,37 @@
+﻿<!-- Learning JavaScript basics - practice file from JavaScript, pushed 2026-10-22 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // higher order function:
+        //accept anotehr  funvtion as a parameter
+        // or return a function
+
+        //filter,map,reduce
+        const data =[15,44, -77, 7,-23,56,8];
+        /*
+        const positives=[]'
+        for(let i = 0; i<=data.length;i++) {
+        if (data[i] >=0){
+        positives.push(data[i])
+        }
+    }
+        */ 
+       const positives = data.filter(num=> num>0); 
+       console.log(positives);
+
+       
+       num => num%2===0
+
+       const evens =data.filter(num => num%2 ===0);
+       console.log(evens);
+       
+       
+    </script>
+</body>
+</html>
