@@ -1,0 +1,57 @@
+﻿<!-- Learning JavaScript basics - practice file from JavaScript, pushed 2026-10-21 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=           , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const stu = {
+        "id":101,
+        "name":"Vineet",
+        "branch":"IT",
+        "percent":78.50
+    }; //JSON
+    // object destructuring
+    /*    this becomes so lengthy
+    const id = stu.id;          
+    const name = stu.name;
+    const percent = stu.percent;
+    */
+    // const {id, name,percent} = stu;
+
+    // while  destructuring, the  new variables names must be 
+    // he existing keys in the object
+
+    // alert(name+ " " + percent);
+
+
+    // rest operator[...](we can use this with arrays  as well as objects);
+    // ... is put on the left side of the assgnment operator =
+   /* const {id, ...others} = stu;
+    console.log(id); // it will give us id 101
+    console.log(others);  // it will give everything remaining else id */
+    // const stu = {"name":"Vineet","branch":"IT", "percent":78.50}; 
+      
+    const data = [10,20,30,40,50]; // array object
+    const [f,s,...restAll] = data;
+    console.log(f,s,restAll);
+    
+    // SPREAD OPERATOR
+    // ... is used on right  side of assignment operator =
+   /* const stuCopy = stu; // adds a reference 'stuCopy' to
+   // existing object. change in stu or stuCopy will affect the other
+    console.log(stu)
+    stuCopy.percent= 90.50;
+    console.log(stu);
+    */
+     const newStu = {...stu}; // creates seperate independent
+     //objet with name new stu
+     newStu.percent = 92.50;
+     console.log(stu);
+     
+     </script>
+</body>
+</html>
